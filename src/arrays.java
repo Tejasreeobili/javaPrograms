@@ -1,23 +1,17 @@
-import java.util.Scanner;
+import java.util.*;
 
-public class arrays  {
+public class arrays {
     public static void main(String[] args) {
-        // Loop through numbers from 2 to 100
-        for (int num = 2; num <= 100; num++) {
-            boolean isPrime = true; // Assume the number is prime
 
-            // Check if the number is divisible by any number from 2 to sqrt(num)
-            for (int i = 2; i <=Math.sqrt(num); i++) {
-                if (num % i == 0) {
-                    isPrime = false; // If divisible, it's not prime
-                    break; // No need to check further
-                }
-            }
+        Scanner sc=new Scanner (System.in);
+        int size = sc.nextInt();
+        int[] nameInput=new int[size];
+        for(int i=0;i<size;i++){
+            nameInput[i]= sc.nextInt();
 
-            // If the number is prime, print it
-            if (isPrime) {
-                System.out.println(num);
-            }
+        }
+        for (int i=0;i< nameInput.length;i++){
+            System.out.print(nameInput[i]+" ");
         }
     }
 }
